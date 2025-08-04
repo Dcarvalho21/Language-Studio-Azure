@@ -1,9 +1,3 @@
-Aqui está o arquivo markdown formatado para você copiar e colar diretamente:
-
----
-
-**speech-studio-experiments.md**
-
 # 🎤 Azure Speech Studio - Experimentos Práticos
 
 ## 📋 Visão Geral
@@ -146,7 +140,3 @@ Testar a precisão da transcrição em português brasileiro com diferentes tipo
 - [ ] Explorar custom speech models
 - [ ] Integrar com Azure Bot Framework
 - [ ] Testar batch transcription para volumes maiores
-
----
-
-Agora você pode copiar todo o conteúdo acima (a partir do `# 🎤`) e colar diretamente no seu arquivo `.md` no GitHub!
