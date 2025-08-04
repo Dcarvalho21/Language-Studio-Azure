@@ -1,0 +1,173 @@
+{
+  "sentiment_analysis_examples": [
+    {
+      "experiment_id": "sentiment_001",
+      "text": "Acabei de receber meu pedido e estou absolutamente impressionado! A qualidade superou todas as minhas expectativas. O atendimento foi excepcional do início ao fim. Definitivamente vou recomendar para todos os meus amigos!",
+      "analysis_results": {
+        "overall_sentiment": "positive",
+        "confidence_scores": {
+          "positive": 0.97,
+          "neutral": 0.02,
+          "negative": 0.01
+        },
+        "key_phrases": [
+          "absolutamente impressionado",
+          "qualidade superou expectativas",
+          "atendimento excepcional",
+          "definitivamente vou recomendar"
+        ],
+        "emotions": [
+          {"emotion": "joy", "score": 0.95},
+          {"emotion": "satisfaction", "score": 0.92},
+          {"emotion": "excitement", "score": 0.88}
+        ]
+      }
+    },
+    {
+      "experiment_id": "sentiment_002", 
+      "text": "O produto até que é OK, mas nada demais. O preço está na média do mercado. Talvez eu compraria novamente, talvez não. Depende das opções disponíveis na época.",
+      "analysis_results": {
+        "overall_sentiment": "neutral",
+        "confidence_scores": {
+          "positive": 0.23,
+          "neutral": 0.65,
+          "negative": 0.12
+        },
+        "key_phrases": [
+          "produto OK",
+          "preço na média",
+          "talvez compraria",
+          "depende das opções"
+        ],
+        "emotions": [
+          {"emotion": "indifference", "score": 0.78},
+          {"emotion": "uncertainty", "score": 0.65}
+        ]
+      }
+    }
+  ],
+  "entity_extraction_examples": [
+    {
+      "experiment_id": "ner_001",
+      "text": "A reunião com a Microsoft será na próxima terça-feira, dia 15 de janeiro, às 14h30 no escritório de São Paulo. João Silva e Maria Santos representarão nossa empresa. O email de confirmação deve ser enviado para contato@empresa.com.br até amanhã.",
+      "extracted_entities": [
+        {
+          "text": "Microsoft",
+          "category": "Organization", 
+          "confidence": 0.99,
+          "offset": 16,
+          "length": 9
+        },
+        {
+          "text": "próxima terça-feira",
+          "category": "DateTime",
+          "subcategory": "Date",
+          "confidence": 0.95,
+          "offset": 32,
+          "length": 19
+        },
+        {
+          "text": "15 de janeiro",
+          "category": "DateTime", 
+          "subcategory": "Date",
+          "confidence": 0.97,
+          "offset": 57,
+          "length": 13
+        },
+        {
+          "text": "14h30",
+          "category": "DateTime",
+          "subcategory": "Time", 
+          "confidence": 0.98,
+          "offset": 75,
+          "length": 5
+        },
+        {
+          "text": "São Paulo",
+          "category": "Location",
+          "subcategory": "GPE",
+          "confidence": 0.96,
+          "offset": 95,
+          "length": 9
+        },
+        {
+          "text": "João Silva",
+          "category": "Person",
+          "confidence": 0.99,
+          "offset": 106,
+          "length": 10
+        },
+        {
+          "text": "Maria Santos",
+          "category": "Person", 
+          "confidence": 0.98,
+          "offset": 119,
+          "length": 12
+        },
+        {
+          "text": "contato@empresa.com.br",
+          "category": "Email",
+          "confidence": 0.99,
+          "offset": 210,
+          "length": 22
+        }
+      ]
+    }
+  ],
+  "text_classification_examples": [
+    {
+      "experiment_id": "class_001",
+      "text": "A nova versão do framework React 18 trouxe melhorias significativas no renderização concorrente. Os desenvolvedores agora podem criar aplicações mais responsivas com menor uso de CPU. As atualizações incluem Suspense melhorado e novos hooks.",
+      "classification_results": [
+        {
+          "category": "Tecnologia",
+          "confidence": 0.94
+        },
+        {
+          "category": "Programação",
+          "confidence": 0.89
+        },
+        {
+          "category": "Desenvolvimento Web",
+          "confidence": 0.76
+        }
+      ],
+      "key_topics": [
+        "React",
+        "framework",
+        "renderização",
+        "desenvolvedores",
+        "aplicações",
+        "Suspense",
+        "hooks"
+      ]
+    }
+  ],
+  "language_detection_examples": [
+    {
+      "experiment_id": "lang_001",
+      "mixed_text_analysis": [
+        {
+          "text": "Olá! Como posso ajudá-lo hoje?",
+          "detected_language": "pt",
+          "confidence": 0.99
+        },
+        {
+          "text": "Hello! How can I help you today?",
+          "detected_language": "en", 
+          "confidence": 0.98
+        },
+        {
+          "text": "¡Hola! ¿Cómo puedo ayudarte hoy?",
+          "detected_language": "es",
+          "confidence": 0.97
+        },
+        {
+          "text": "Bonjour! Comment puis-je vous aider aujourd'hui?",
+          "detected_language": "fr",
+          "confidence": 0.95
+        }
+      ]
+    }
+  ]
+}
