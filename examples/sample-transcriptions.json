@@ -1,0 +1,79 @@
+{
+  "speech_to_text_examples": [
+    {
+      "experiment_id": "exp_001",
+      "audio_file": "meeting_recording.wav",
+      "duration": "00:05:23",
+      "language": "pt-BR",
+      "environment": "conference_room",
+      "participants": 3,
+      "transcription": {
+        "text": "Bom dia pessoal, vamos começar nossa reunião sobre o projeto de análise de dados. João, você pode nos apresentar os resultados da última sprint? Claro, durante essas duas semanas conseguimos implementar o pipeline de processamento e os primeiros dashboards estão funcionando. Maria, qual é sua avaliação dos indicadores? Os números mostram uma melhoria de vinte por cento na eficiência.",
+        "confidence": 0.94,
+        "words": [
+          {
+            "word": "Bom",
+            "start_time": "00:00:01.200",
+            "end_time": "00:00:01.400",
+            "confidence": 0.98
+          },
+          {
+            "word": "dia",
+            "start_time": "00:00:01.400", 
+            "end_time": "00:00:01.600",
+            "confidence": 0.99
+          }
+        ],
+        "speaker_identification": [
+          {
+            "speaker": "Speaker_1",
+            "segments": ["00:00:01.200-00:00:08.500"]
+          },
+          {
+            "speaker": "Speaker_2", 
+            "segments": ["00:00:08.600-00:00:25.300"]
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "exp_002",
+      "audio_file": "customer_service_call.wav",
+      "duration": "00:03:45",
+      "language": "pt-BR",
+      "environment": "call_center",
+      "scenario": "customer_complaint",
+      "transcription": {
+        "text": "Alô, bom dia. Eu gostaria de fazer uma reclamação sobre o produto que comprei. O item chegou com defeito e já tentei entrar em contato várias vezes. Entendo sua frustração, senhor. Vou registrar sua ocorrência e providenciar a troca imediatamente. Qual é o número do seu pedido?",
+        "confidence": 0.89,
+        "sentiment_analysis": {
+          "overall_sentiment": "negative_to_neutral",
+          "customer_sentiment": "frustrated",
+          "agent_sentiment": "professional",
+          "sentiment_progression": [
+            {"time": "00:00:00", "sentiment": "negative", "score": -0.7},
+            {"time": "00:01:30", "sentiment": "neutral", "score": 0.1},
+            {"time": "00:03:00", "sentiment": "positive", "score": 0.4}
+          ]
+        }
+      }
+    }
+  ],
+  "text_to_speech_examples": [
+    {
+      "experiment_id": "tts_001",
+      "input_text": "Bem-vindos ao sistema de inteligência artificial da nossa empresa. Para continuar, por favor, diga seu nome completo após o bip.",
+      "voice": "pt-BR-FranciscaNeural",
+      "speech_rate": "0.9",
+      "pitch": "+5%",
+      "output_format": "audio-24khz-48kbitrate-mono-mp3",
+      "ssml_used": true,
+      "ssml_code": "<speak version='1.0' xml:lang='pt-BR'><voice name='pt-BR-FranciscaNeural'><prosody rate='0.9' pitch='+5%'>Bem-vindos ao sistema de inteligência artificial da nossa empresa. <break time='500ms'/> Para continuar, por favor, diga seu nome completo após o bip.</prosody></voice></speak>",
+      "quality_metrics": {
+        "naturalness": 9.2,
+        "clarity": 9.5,
+        "pronunciation": 9.3
+      }
+    }
+  ]
+}
